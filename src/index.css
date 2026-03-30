@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-warm-white font-sans text-warm-ink antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Amber focus ring — meets WCAG 1.4.11 non-text contrast on warm backgrounds */
+  :focus-visible {
+    @apply outline-none ring-2 ring-sun-500 ring-offset-2 ring-offset-warm-white;
+  }
+}
