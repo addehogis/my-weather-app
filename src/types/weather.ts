@@ -3,10 +3,18 @@ export interface WeatherData {
   country: string
   temperature: number
   feelsLike: number
+  high: number
+  low: number
   condition: string
   description: string
   humidity: number
   windSpeed: number
+  iconCode: string
+}
+
+export interface HourlySlot {
+  time: Date
+  temperature: number
   iconCode: string
 }
 
@@ -21,6 +29,7 @@ export interface ForecastDay {
 
 export interface WeatherResult {
   weather: WeatherData
+  hourly: HourlySlot[]
   forecast: ForecastDay[]
 }
 

@@ -4,18 +4,14 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-semibold transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center whitespace-nowrap font-mono text-sm font-bold uppercase tracking-widest transition-colors duration-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:pointer-events-none disabled:opacity-40',
   {
     variants: {
       variant: {
-        default:
-          'bg-sun-500 text-warm-ink border-2 border-warm-ink shadow-brutal hover:shadow-brutal-sm hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px]',
-        outline:
-          'border-2 border-warm-ink bg-warm-cream text-warm-ink shadow-brutal-sm hover:bg-sun-50 hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]',
-        ghost:
-          'text-warm-ink hover:bg-sun-100 hover:text-warm-ink',
-        destructive:
-          'bg-red-500 text-white border-2 border-warm-ink shadow-brutal hover:shadow-brutal-sm hover:translate-x-[2px] hover:translate-y-[2px]',
+        default:     'bg-black text-white border border-black hover:bg-white hover:text-black',
+        outline:     'bg-white text-black border border-black hover:bg-black hover:text-white',
+        ghost:       'bg-transparent text-black hover:bg-gray-100',
+        destructive: 'bg-black text-white border border-black hover:bg-gray-800',
       },
       size: {
         default: 'h-10 px-5 py-2',
